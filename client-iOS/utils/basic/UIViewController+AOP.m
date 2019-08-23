@@ -28,7 +28,7 @@
 //    if (self.class != class) {
 //        self.view.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
 //    }
-    CLog(@"%@",self);
+//    CLog(@"%@",self);
     
     
 }

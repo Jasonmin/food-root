@@ -13,6 +13,15 @@
 		CFF9DB41230FB93F00A0AE4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF9DB3F230FB93F00A0AE4F /* Main.storyboard */; };
 		CFF9DB43230FB94100A0AE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF9DB42230FB94100A0AE4F /* Assets.xcassets */; };
 		CFF9DB46230FB94100A0AE4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFF9DB44230FB94100A0AE4F /* LaunchScreen.storyboard */; };
+		CFF9DB54230FBD2800A0AE4F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB53230FBD2800A0AE4F /* BaseViewController.m */; };
+		CFF9DB57230FBD4D00A0AE4F /* UIViewController+UIStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB56230FBD4D00A0AE4F /* UIViewController+UIStyle.m */; };
+		CFF9DB5B230FBD7400A0AE4F /* UIViewController+KeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB59230FBD7400A0AE4F /* UIViewController+KeyBoard.m */; };
+		CFF9DB5E230FBD7A00A0AE4F /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB5C230FBD7A00A0AE4F /* UIViewController+AOP.m */; };
+		CFF9DB61230FBDA800A0AE4F /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB5F230FBDA700A0AE4F /* ViewUtil.m */; };
+		CFF9DB66230FBE9200A0AE4F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB65230FBE9200A0AE4F /* WebViewController.m */; };
+		CFF9DB69230FBF1800A0AE4F /* TJURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF9DB68230FBF1800A0AE4F /* TJURLRequest.m */; };
+		CFF9DB6C230FC28C00A0AE4F /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = CFF9DB6B230FC28C00A0AE4F /* index.html */; };
+		CFF9DB6E230FC33900A0AE4F /* vendor in Resources */ = {isa = PBXBuildFile; fileRef = CFF9DB6D230FC33900A0AE4F /* vendor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,25 @@
 		CFF9DB42230FB94100A0AE4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFF9DB45230FB94100A0AE4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFF9DB47230FB94100A0AE4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFF9DB51230FBD2700A0AE4F /* food-root-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "food-root-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFF9DB52230FBD2800A0AE4F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		CFF9DB53230FBD2800A0AE4F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		CFF9DB55230FBD4D00A0AE4F /* UIViewController+UIStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UIStyle.h"; sourceTree = "<group>"; };
+		CFF9DB56230FBD4D00A0AE4F /* UIViewController+UIStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UIStyle.m"; sourceTree = "<group>"; };
+		CFF9DB58230FBD5900A0AE4F /* BaseProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseProtocol.h; sourceTree = "<group>"; };
+		CFF9DB59230FBD7400A0AE4F /* UIViewController+KeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KeyBoard.m"; sourceTree = "<group>"; };
+		CFF9DB5A230FBD7400A0AE4F /* UIViewController+KeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KeyBoard.h"; sourceTree = "<group>"; };
+		CFF9DB5C230FBD7A00A0AE4F /* UIViewController+AOP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOP.m"; sourceTree = "<group>"; };
+		CFF9DB5D230FBD7A00A0AE4F /* UIViewController+AOP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOP.h"; sourceTree = "<group>"; };
+		CFF9DB5F230FBDA700A0AE4F /* ViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewUtil.m; sourceTree = "<group>"; };
+		CFF9DB60230FBDA800A0AE4F /* ViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewUtil.h; sourceTree = "<group>"; };
+		CFF9DB62230FBE5000A0AE4F /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		CFF9DB64230FBE9200A0AE4F /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		CFF9DB65230FBE9200A0AE4F /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		CFF9DB67230FBF1800A0AE4F /* TJURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJURLRequest.h; sourceTree = "<group>"; };
+		CFF9DB68230FBF1800A0AE4F /* TJURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJURLRequest.m; sourceTree = "<group>"; };
+		CFF9DB6B230FC28C00A0AE4F /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../web/index.html; sourceTree = "<group>"; };
+		CFF9DB6D230FC33900A0AE4F /* vendor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vendor; path = ../../web/vendor; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +82,15 @@
 				8996687E074D223607CA72BB /* Pods-food-root.debug.xcconfig */,
 				615AD34140162263B1B34740 /* Pods-food-root.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		CFF9DB2F230FB93F00A0AE4F = {
 			isa = PBXGroup;
 			children = (
+				CFF9DB6A230FC26400A0AE4F /* websrc */,
+				CFF9DB63230FBE7200A0AE4F /* h5 */,
+				CFF9DB4F230FBCD600A0AE4F /* utils */,
 				CFF9DB3A230FB93F00A0AE4F /* food-root */,
 				CFF9DB39230FB93F00A0AE4F /* Products */,
 				98883802C07942DFD8677B3A /* Pods */,
@@ -87,6 +117,54 @@
 				CFF9DB47230FB94100A0AE4F /* Info.plist */,
 			);
 			path = "food-root";
+			sourceTree = "<group>";
+		};
+		CFF9DB4F230FBCD600A0AE4F /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CFF9DB50230FBD1400A0AE4F /* basic */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		CFF9DB50230FBD1400A0AE4F /* basic */ = {
+			isa = PBXGroup;
+			children = (
+				CFF9DB51230FBD2700A0AE4F /* food-root-Bridging-Header.h */,
+				CFF9DB55230FBD4D00A0AE4F /* UIViewController+UIStyle.h */,
+				CFF9DB56230FBD4D00A0AE4F /* UIViewController+UIStyle.m */,
+				CFF9DB52230FBD2800A0AE4F /* BaseViewController.h */,
+				CFF9DB53230FBD2800A0AE4F /* BaseViewController.m */,
+				CFF9DB58230FBD5900A0AE4F /* BaseProtocol.h */,
+				CFF9DB62230FBE5000A0AE4F /* Macro.h */,
+				CFF9DB5A230FBD7400A0AE4F /* UIViewController+KeyBoard.h */,
+				CFF9DB59230FBD7400A0AE4F /* UIViewController+KeyBoard.m */,
+				CFF9DB5D230FBD7A00A0AE4F /* UIViewController+AOP.h */,
+				CFF9DB5C230FBD7A00A0AE4F /* UIViewController+AOP.m */,
+				CFF9DB60230FBDA800A0AE4F /* ViewUtil.h */,
+				CFF9DB5F230FBDA700A0AE4F /* ViewUtil.m */,
+				CFF9DB67230FBF1800A0AE4F /* TJURLRequest.h */,
+				CFF9DB68230FBF1800A0AE4F /* TJURLRequest.m */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		CFF9DB63230FBE7200A0AE4F /* h5 */ = {
+			isa = PBXGroup;
+			children = (
+				CFF9DB64230FBE9200A0AE4F /* WebViewController.h */,
+				CFF9DB65230FBE9200A0AE4F /* WebViewController.m */,
+			);
+			path = h5;
+			sourceTree = "<group>";
+		};
+		CFF9DB6A230FC26400A0AE4F /* websrc */ = {
+			isa = PBXGroup;
+			children = (
+				CFF9DB6D230FC33900A0AE4F /* vendor */,
+				CFF9DB6B230FC28C00A0AE4F /* index.html */,
+			);
+			path = websrc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +201,7 @@
 				TargetAttributes = {
 					CFF9DB37230FB93F00A0AE4F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -149,7 +228,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF9DB6E230FC33900A0AE4F /* vendor in Resources */,
 				CFF9DB46230FB94100A0AE4F /* LaunchScreen.storyboard in Resources */,
+				CFF9DB6C230FC28C00A0AE4F /* index.html in Resources */,
 				CFF9DB43230FB94100A0AE4F /* Assets.xcassets in Resources */,
 				CFF9DB41230FB93F00A0AE4F /* Main.storyboard in Resources */,
 			);
@@ -170,6 +251,7 @@
 				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -179,6 +261,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,8 +298,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF9DB57230FBD4D00A0AE4F /* UIViewController+UIStyle.m in Sources */,
+				CFF9DB69230FBF1800A0AE4F /* TJURLRequest.m in Sources */,
+				CFF9DB5E230FBD7A00A0AE4F /* UIViewController+AOP.m in Sources */,
+				CFF9DB5B230FBD7400A0AE4F /* UIViewController+KeyBoard.m in Sources */,
+				CFF9DB66230FBE9200A0AE4F /* WebViewController.m in Sources */,
 				CFF9DB3E230FB93F00A0AE4F /* ViewController.swift in Sources */,
+				CFF9DB54230FBD2800A0AE4F /* BaseViewController.m in Sources */,
 				CFF9DB3C230FB93F00A0AE4F /* AppDelegate.swift in Sources */,
+				CFF9DB61230FBDA800A0AE4F /* ViewUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +453,7 @@
 			baseConfigurationReference = 8996687E074D223607CA72BB /* Pods-food-root.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDET7L4JQ6;
 				INFOPLIST_FILE = "food-root/Info.plist";
@@ -372,6 +463,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qz.food-root";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "utils/basic/food-root-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,6 +475,7 @@
 			baseConfigurationReference = 615AD34140162263B1B34740 /* Pods-food-root.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDET7L4JQ6;
 				INFOPLIST_FILE = "food-root/Info.plist";
@@ -391,6 +485,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qz.food-root";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "utils/basic/food-root-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

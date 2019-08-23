@@ -8,8 +8,8 @@
 
 #import "WebViewController.h"
 #import <WebKit/WebKit.h>
-#import "GlobalCall.h"
 #import "TJURLRequest.h"
+#import "Masonry.h"
 
 @interface WebViewController ()
 <WKNavigationDelegate,WKScriptMessageHandler,WKUIDelegate>
@@ -25,11 +25,14 @@ NSString *const UDKey_CACHE_H5Script = @"UDKey_CACHE_H5Script";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.baseUrl = self.linkUrl;//@"https://cn.bing.com/";
+    self.baseUrl = @"https://cn.bing.com/";
     
     [self setupViews];
     
-    TJURLRequest *request = [TJURLRequest requestWithURL:[NSURL URLWithString:self.baseUrl]];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
+    NSURL *fileURL = [NSURL fileURLWithPath:path];
+    
+    TJURLRequest *request = [TJURLRequest requestWithURL:fileURL];
     [self.wkWebView loadRequest:request];
     
     [self setupTwoNavItems];
@@ -37,31 +40,8 @@ NSString *const UDKey_CACHE_H5Script = @"UDKey_CACHE_H5Script";
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self clearCache];
 }
 
-- (void)clearCache {
-    if ([[[UIDevice currentDevice]systemVersion]intValue ] >= 9.0) {
-        if (@available(iOS 9.0, *)) {
-            NSArray * types =@[WKWebsiteDataTypeMemoryCache,WKWebsiteDataTypeDiskCache]; // 9.0之后才有的
-            NSSet *websiteDataTypes = [NSSet setWithArray:types];
-            NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
-            [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
-                
-            }];
-        } else {
-            // Fallback on earlier versions
-        }
-        
-    }else{
-        NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];
-        NSString *cookiesFolderPath = [libraryPath stringByAppendingString:@"/Cookies"];
-        NSLog(@"%@", cookiesFolderPath);
-        NSError *errors;
-        [[NSFileManager defaultManager] removeItemAtPath:cookiesFolderPath error:&errors];
-        
-    }
-}
 
 - (void)setupViews {
     [self.view addSubview:self.wkWebView];
@@ -141,14 +121,7 @@ NSString *const UDKey_CACHE_H5Script = @"UDKey_CACHE_H5Script";
 
 #pragma mark - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    if ([message.name isEqualToString:@"startVoiceChat"]) {
-        NSDictionary *dict = message.body;
-        NSString *targetId = dict[@"targetId"];
-        NSString *conversationType = dict[@"conversationType"];
-        NSString *userIds = dict[@"userIds"];
-        
-        [[GlobalCall sharedManger] startCall:[conversationType integerValue] targetId:targetId userIds:userIds];
-    }
+    
 }
 
 #pragma mark - alert
@@ -210,7 +183,7 @@ NSString *const UDKey_CACHE_H5Script = @"UDKey_CACHE_H5Script";
         // 实例化对象
         configuration.userContentController = [WKUserContentController new];
         // 调用JS方法
-        [configuration.userContentController addScriptMessageHandler:self name:@"startVoiceChat"];
+//        [configuration.userContentController addScriptMessageHandler:self name:@"startVoiceChat"];
         
         _wkWebView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:configuration];
         _wkWebView.navigationDelegate = self;
@@ -223,7 +196,7 @@ NSString *const UDKey_CACHE_H5Script = @"UDKey_CACHE_H5Script";
 - (UIProgressView *)progressView {
     if (!_progressView){
         _progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 1, self.view.frame.size.width, 2)];
-        _progressView.tintColor = APP_TINT_COLOR;//[UIColor blueColor];
+        _progressView.tintColor = [UIColor greenColor];
         _progressView.trackTintColor = [UIColor clearColor];
     }
     return _progressView;

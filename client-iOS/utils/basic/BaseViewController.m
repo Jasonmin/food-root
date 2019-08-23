@@ -53,11 +53,11 @@
 
 #pragma mark - BaseProtocol
 - (void)showHud {
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 - (void)hideHud {
-    [MBProgressHUD hideHUDForView:self.view];
+//    [MBProgressHUD hideHUDForView:self.view];
 }
 
 - (void)showEmptyView {

@@ -7,6 +7,7 @@
 //
 
 #import "ViewUtil.h"
+#import "Macro.h"
 
 static NSInteger const kNoDataViewTag = 911;
 
