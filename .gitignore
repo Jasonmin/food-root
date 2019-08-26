@@ -1,2 +1,3 @@
 /client-ios/Pods
+/server/node_modules
 .DS_Store
